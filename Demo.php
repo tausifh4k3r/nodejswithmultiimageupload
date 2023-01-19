@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="frmss" enctype="multipart/form-data">
-        <input type="file" id="txtHello" name="multi-files" accept='image/*' multiple>
+        <input type="file" id="MultiFiles" name="multi-files" accept='image/*' multiple>
         <input type="submit" value="Submit">
     </form>
 </body>
@@ -18,11 +18,11 @@
         e.preventDefault();
         var formData = new FormData();// yourForm: form selector   
         // var ProfilePic=$('#txtHello').prop("files")[0];
-        var filesLength=document.getElementById('txtHello').files.length;
+        var filesLength=document.getElementById('MultiFiles').files.length;
         console.log(filesLength);
 
             for(var i=0;i<filesLength;i++){
-                formData.append("file", document.getElementById('txtHello').files[i]);
+                formData.append("file", document.getElementById('MultiFiles').files[i]);
             }
         // formData.append("ProfilePic",ProfilePic);
         formData.append("Tausif","Hello");
